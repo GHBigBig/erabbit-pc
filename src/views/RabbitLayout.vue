@@ -1,10 +1,11 @@
 <!-- 一级路由布局容器 -->
 <script setup>
 import RabbitTopNav from '../components/RabbitTopNav.vue';
+import RabbitHearderVue from '@/components/RabbitHearder.vue';
 </script>
 <template>
   <RabbitTopNav></RabbitTopNav>
-  <header>头部</header>
+  <RabbitHearderVue></RabbitHearderVue>
   <main>
     <router-view></router-view>
   </main>

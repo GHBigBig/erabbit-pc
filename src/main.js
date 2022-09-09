@@ -7,6 +7,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 
 import 'normalize.css';
+import '@/assets/styles/common.less';
 
 const app = createApp(App); //创建应用实例
 

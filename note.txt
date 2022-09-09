@@ -4,3 +4,4 @@
 
 vite-plugin-global-style - 处理 CSS、SASS、LESS 和 Stylus 的全局样式.
 
+globalXXX.less 并不能引入到样式中，这样是为了方便，全局的less文件还是需要手动引入
