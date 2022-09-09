@@ -1,13 +1,28 @@
+<script setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+
+const store = useStore();
+const userStatusTip = computed(() =>
+  '' === store.state.user.profile.account
+    ? '请先登录'
+    : store.state.user.profile.account
+);
+const loginOrRegisterTip = computed(() =>
+  '' === store.state.user.profile.account ? '免费注册' : '退出登录'
+);
+</script>
+
 <template>
   <nav class="app-topnav">
     <div class="container">
       <ul>
         <li>
-          <a href="javascript:;"><i class="iconfont icon-user"></i>周杰伦</a>
+          <a href="javascript:;">{{ userStatusTip }}</a>
         </li>
-        <li><a href="javascript:;">退出登录</a></li>
-        <li><a href="javascript:;">请先登录</a></li>
-        <li><a href="javascript:;">免费注册</a></li>
+        <li>
+          <a href="javascript:;">{{ loginOrRegisterTip }}</a>
+        </li>
         <li><a href="javascript:;">我的订单</a></li>
         <li><a href="javascript:;">会员中心</a></li>
         <li><a href="javascript:;">帮助中心</a></li>
